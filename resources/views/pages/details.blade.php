@@ -1,98 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+@extends('layouts.app')
 
-    <title>Store - Your Best Marketplace</title>
+@section('title')
+    Store Product Details
+@endsection
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="style/main.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <nav
-      class="
-        navbar navbar-expand-lg navbar-light navbar-store
-        fixed-top
-        navbar-fixed-top
-      "
-      data-aos="fade-down"
-    >
-      <div class="container">
-        <a href="/index.html" class="navbar-brand">
-          <img src="/images/logo.svg" alt="Logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a href="/index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="categories.html" class="nav-link">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a href="rewards.html" class="nav-link">Rewards</a>
-            </li>
-            <!-- Desktop Menu -->
-          </ul>
-          <ul class="navbar-nav d-none d-lg-flex">
-            <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link"
-                id="navbarDropdown"
-                data-toggle="dropdown"
-              >
-                <img
-                  src="images/icon-user.png"
-                  alt=""
-                  class="rounded-circle mr-2 profile-picture"
-                />
-                Hi, CK
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href="/dashboard.html" class="dropdown-item">Dashboard</a>
-                <a href="/dashboard-account.html" class="dropdown-item"
-                  >Settings</a
-                >
-                <div class="dropdown-dividen">
-                  <div class="dropdown-item">Logout</div>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link d-inline-block mt-2">
-                <img src="images/icon-cart-empty.svg" alt="" />
-              </a>
-            </li>
-          </ul>
-          <ul class="navbar-nav d-block d-lg-none">
-            <li class="nav-item">
-              <a href="#" class="nav-link"> Hi, CK </a>
-            </li>
-            <li class="navbar-item">
-              <a href="#" class="nav-link d-inline-block"> Cart </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
+@section('content')
+<!-- Page Content -->
     <div class="page-content page-detail">
       <section
         class="store-breadcrumbs"
@@ -119,7 +32,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8" data-aos="zoom-in">
-              <!-- vuejs 
+              <!-- vuejs
                   data binding -->
               <transition name="slide-fade" mode="out-in">
                 <!-- mengambil img dari photos menggunakan array activePhotoss  -->
@@ -208,7 +121,7 @@
                 <ul class="list-unstyled">
                   <li class="media">
                     <img
-                      src="images/icons-testimonial-1.png"
+                      src="/images/icons-testimonial-1.png"
                       class="mr-3 rounded-circle"
                       alt=""
                     />
@@ -223,7 +136,7 @@
                   </li>
                   <li class="media">
                     <img
-                      src="images/icons-testimonial-2.png"
+                      src="/images/icons-testimonial-2.png"
                       class="mr-3 rounded-circle"
                       alt=""
                     />
@@ -238,7 +151,7 @@
                   </li>
                   <li class="media">
                     <img
-                      src="images/icons-testimonial-3.png"
+                      src="/images/icons-testimonial-3.png"
                       class="mr-3 rounded-circle"
                       alt=""
                     />
@@ -258,24 +171,9 @@
         </section>
       </div>
     </div>
+@endsection
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <p class="pt-4 pb-3">2021 Copyright Store. All Rights Reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="/vendor/jquery/jquery.slim.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+@push('addon-script')
     <script src="/vendor/vue/vue.js"></script>
     <script>
       var gallery = new Vue({
@@ -314,6 +212,4 @@
         },
       });
     </script>
-    <script src="/script/navbar-scroll.js"></script>
-  </body>
-</html>
+@endpush

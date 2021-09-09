@@ -24,7 +24,7 @@
             <a href="{{ url('home') }}" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-            <a href="{{ url('category') }}" class="nav-link">Categories</a>
+            <a href="{{ url('categories') }}" class="nav-link">Categories</a>
             </li>
             <li class="nav-item">
               <a href="rewards.html" class="nav-link">Rewards</a>

@@ -155,3 +155,16 @@ Store Dashboard Transactions Details
   </div>
 </div>
 @endsection
+
+@push('addon-script')
+<script src="/vendor/vue/vue.js"></script>
+<script>
+  var transactionDetails = new Vue({
+    el: "#transactionDetails",
+    data: {
+      status: "SHIPPING",
+      resi: "JNE20839149021029301231",
+    },
+  });
+</script>
+@endpush

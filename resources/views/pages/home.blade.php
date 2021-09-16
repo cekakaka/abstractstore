@@ -30,21 +30,21 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img
-                      src="images/banner-kepakkan-sayap.jpg"
+                      src="images/banner.jpg"
                       alt="Carousel-Image"
                       class="d-block w-100"
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="images/banner-rakernas.jpg"
+                      src="images/banner.jpg"
                       alt="Carousel-Image"
                       class="d-block w-100"
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="images/banner-rapat.jpg"
+                      src="images/banner.jpg"
                       alt="Carousel-Image"
                       class="d-block w-100"
                     />

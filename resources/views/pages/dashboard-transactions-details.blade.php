@@ -109,7 +109,6 @@ Store Dashboard Transactions Details
                         class="form-control"
                         v-model="status"
                       >
-                        <option value="UNPAID">Unpaid</option>
                         <option value="PENDING">Pending</option>
                         <option value="SHIPPING">Shipping</option>
                         <option value="SUCCESS">Success</option>

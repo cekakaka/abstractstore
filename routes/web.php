@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,13 +37,23 @@ Route::get('/dashboard/transactions', 'DashboardTransactionController@index')
 Route::get('/dashboard/transactions/{id}', 'DashboardTransactionController@detail')
     ->name('dashboard-transaction-details');
 
-// Daashboard Setting
+// Dashboard Setting
 Route::get('/dashboard/settings', 'DashboardSettingController@store')
     ->name('dashboard-settings-store');
 Route::get('/dashboard/account', 'DashboardSettingController@account')
     ->name('dashboard-settings-account');
 
+// Route::get('/admin', 'Admin\DashboardController@index')
+//     ->name('admin-dashboard');
 
+//ADMIN Setting
+//->middleware(['auth','admin'])
+
+Route::prefix('admin')
+    ->namespace('Admin')
+    ->group(function(){
+        Route::get('/', 'DashboardController@index')->name('admin-dashboard');
+    });
 
 Auth::routes();
 

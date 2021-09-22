@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
 
@@ -53,6 +54,7 @@ Route::prefix('admin')
     ->namespace('Admin')
     ->group(function(){
         Route::get('/', 'DashboardController@index')->name('admin-dashboard');
+        Route::resource('category','CategoryController');
     });
 
 Auth::routes();

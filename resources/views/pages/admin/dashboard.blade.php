@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Store Admin Page
+    Store Dashboard Admin Page
 @endsection
 
 @section('content')

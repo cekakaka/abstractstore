@@ -57,5 +57,9 @@ Route::prefix('admin')
         Route::resource('category','CategoryController');
     });
 
+Route::get('/debug-sentry', function () {
+    throw new Exception('Hi CK! This is first Sentry !');
+});
+
 Auth::routes();
 

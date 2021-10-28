@@ -20,11 +20,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ route('category.create') }}">
+                        <a href="{{ route('category.create') }}" class="btn btn-primary mb-3">
                         + Kategori Baru
                         </a>
                         <div class="table-responsive mt-3">
-                            <table class="table-hover scroll-horizontal-vertical w-100" id="crudTable">
+                            <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -35,7 +35,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                 </tbody>
                             </table>
                         </div>

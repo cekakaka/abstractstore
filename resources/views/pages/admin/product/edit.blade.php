@@ -40,11 +40,12 @@
                                         <input type="text" name="name" class="form-control" value="{{ $item->name }}" required>
                                     </div>
                                 </div>
+                                {{-- <input class="form-control" name="user_id" type="" value="{{ $item->users_id }}"> --}}
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Pemilik Product</label>
                                         <select name="user_id" class="form-control">
-                                            <option value="{{ $item->users_id }}" selected>{{ $item->user->name }}</option>
+                                            <option  value="{{ $item->user_id }}" selected>{{ $item->user->name }}</option>
                                             @foreach ($users as $user)
                                                 <option value="{{ $user->id }}">{{ $user->name }}</option>
                                             @endforeach
@@ -55,7 +56,7 @@
                                     <div class="form-group">
                                         <label>Category Product</label>
                                         <select name="categories_id" class="form-control">
-                                            <option value="{{ $item->categories_id }}">{{ $item->category->name }}</option>
+                                            <option value="{{ $item->categories_id }}" selected>{{ $item->category->name }}</option>
                                             @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                                             @endforeach

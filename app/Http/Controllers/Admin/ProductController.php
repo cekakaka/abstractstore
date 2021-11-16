@@ -137,6 +137,7 @@ class ProductController extends Controller
         $item = Product::findOrFail($id);
 
         $data['slug'] = Str::slug($request->name);
+        //dd($data);
 
         $item->update($data);
 

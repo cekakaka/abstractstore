@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ProductGallery extends Model
 {
-    protected $table = 'products_galleries';
+    //protected $table = 'products_galleries';
 
     protected $fillable = [
         'photos','products_id'

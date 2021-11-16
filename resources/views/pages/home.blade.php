@@ -135,7 +135,7 @@
                     No Categories Found
                 </div>
             @endforelse
-            </div>
+          </div>
         </div>
     </section>
     </div>

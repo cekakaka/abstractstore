@@ -53,7 +53,7 @@
                     data-toggle="dropdown"
                   >
                     <img
-                      src="images/icon-user.png"
+                      src="/images/icon-user.png"
                       alt=""
                       class="rounded-circle mr-2 profile-picture"
                     />
@@ -74,7 +74,7 @@
                 </li>
                 <li class="nav-item">
                   <a href="" class="nav-link d-inline-block mt-2">
-                    <img src="images/icon-cart-empty.svg" alt="" />
+                    <img src="{{ asset("images/icon-cart-empty.svg") }}" alt="" />
                   </a>
                 </li>
               </ul>

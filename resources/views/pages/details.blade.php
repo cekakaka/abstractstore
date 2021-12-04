@@ -28,7 +28,7 @@
         </div>
       </section>
 
-      <section class="store-gallery" id="gallery">
+      <section class="store-gallery mt-3" id="gallery">
         <div class="container">
           <div class="row">
             <div class="col-lg-8" data-aos="zoom-in">
@@ -73,16 +73,28 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
-                <h1>Sofa Maurice 2</h1>
-                <div class="owner">by Candra Kirana</div>
-                <div class="price">Rp.9.999.999</div>
+                <h1>{{ $product->name }}</h1>
+                <div class="owner">by {{ $product->user->store_name }}</div>
+                <div class="price">Rp.{{ number_format($product->price) }}</div>
               </div>
               <div class="col-lg-2" data-aos="zoom-in">
-                <a
-                  href="/cart.html"
-                  class="btn btn-success px-4 text-white btn-block md-3"
-                  >Add To Cart</a
-                >
+                  @auth
+                    <form action="{{ route('detail-add', $product->id)}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <button
+                            type="submit"
+                            class="btn btn-success px-4 text-white btn-block md-3"
+                        >Add To Cart
+                        </button>
+                    </form>
+                    @else
+                    <a
+                        href="{{ route('login') }}"
+                        class="btn btn-success px-4 text-white btn-block md-3"
+                        >Sign In To Add
+                    </a>
+                  @endauth
+
               </div>
             </div>
           </div>
@@ -92,10 +104,7 @@
             <div class="row">
               <div class="col-12 col-lg-8">
                 <p>
-                  The Nike Air Max 720 SE goes bigger than ever before with
-                  Nike's tallest Air unit yet for unimaginable, all-day comfort.
-                  There's super breathable fabrics on the upper, while colours
-                  add a modern edge.
+                  {!! $product->descript !!}
                 </p>
                 <p>
                   Bring the past into the future with the Nike Air Max 2090, a
@@ -185,24 +194,14 @@
           AOS.init();
         },
         data: {
-          activePhotos: 3,
+          activePhotos: 0,
           photos: [
+            @foreach ($product->galleries as $gallery )
             {
-              id: 1,
-              url: "/images/product-details-1.jpg",
+              id: {{ $gallery->id }},
+              url: "{{ Storage::url($gallery->photos) }}",
             },
-            {
-              id: 2,
-              url: "/images/product-details-2.jpg",
-            },
-            {
-              id: 3,
-              url: "/images/product-details-3.jpg",
-            },
-            {
-              id: 4,
-              url: "/images/product-details-4.jpg",
-            },
+            @endforeach
           ],
         },
         methods: {

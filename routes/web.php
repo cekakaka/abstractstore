@@ -20,6 +20,8 @@ Route::get('/categories', 'CategoriesController@index')->name('categories');
 Route::get('/categories/{id}', 'CategoriesController@detail')->name('categories-detail');
 
 Route::get('/detail/{id}', 'DetailController@index')->name('detail');
+Route::post('/detail/{id}', 'DetailController@add')->name('detail-add');
+
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::get('/success', 'CartController@index')->name('success');
 

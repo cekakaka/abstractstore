@@ -23,6 +23,8 @@ Route::get('/detail/{id}', 'DetailController@index')->name('detail');
 Route::post('/detail/{id}', 'DetailController@add')->name('detail-add');
 
 Route::get('/cart', 'CartController@index')->name('cart');
+Route::delete('/cart/{id}', 'CartController@delete')->name('cart-delete');
+
 Route::get('/success', 'CartController@index')->name('success');
 
 // Auth

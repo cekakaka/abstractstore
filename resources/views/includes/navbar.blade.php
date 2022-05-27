@@ -73,7 +73,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link d-inline-block mt-2">
+                  <a href="{{ route('cart') }}" class="nav-link d-inline-block mt-2">
                     <img src="{{ asset("images/icon-cart-empty.svg") }}" alt="" />
                   </a>
                 </li>
